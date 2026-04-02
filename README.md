@@ -26,6 +26,14 @@ npm run dev
 
 默认访问：<http://localhost:5174>。代理将 `/api` 转发到后端。
 
+**注意：管理后台是独立前端，必须在本目录执行 `npm run dev` 后才能用浏览器打开。** 仅启动后端（8000）不会自动出现 5174 页面。
+
+### 页面打不开？
+
+1. 确认已在 **`safebase_admin_cursor` 项目根目录**运行 `npm run dev`，终端应出现 `Local: http://localhost:5174/`。
+2. 若 5174 已被占用，Vite 会自动改用 **5175、5176…**，请以终端里打印的 **Local** 地址为准。
+3. 可直接访问登录页：<http://localhost:5174/login>（端口以终端为准）。
+
 ## 环境变量
 
 - `VITE_API_BASE_URL`：可选，API 基础路径，留空则使用相对路径（配合 Vite 代理）。

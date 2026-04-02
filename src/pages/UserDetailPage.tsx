@@ -3,7 +3,6 @@ import { useParams, useNavigate } from "react-router-dom";
 import { Button, Card, Descriptions, Typography, Spin, message } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";
 import dayjs from "dayjs";
-import { useAdminStore } from "@/stores/adminStore";
 import { getUserDetail } from "@/api/admin";
 import type { AdminUserDetail } from "@/types";
 
