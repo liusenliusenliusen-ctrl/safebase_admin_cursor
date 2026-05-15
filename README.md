@@ -15,7 +15,7 @@
 
 ## 本地运行
 
-1. 启动 **FastAPI 后端**（[safebase_backend_cursor](../safebase_backend_cursor)），`.env` 中配置 `ADMIN_SECRET`，且 `DATABASE_URL` 能访问与主站相同的库（例如 Supabase Postgres 直连串）。
+1. 启动 **FastAPI 后端**（[safebase_backend_cursor](../safebase_backend_cursor)），`.env` 中配置 `ADMIN_SECRET` 与 **`OPENROUTER_API_KEY`**（后端 LLM 仅 OpenRouter，见该仓库 `.env.example`），且 `DATABASE_URL` 能访问与主站相同的库（例如 Supabase Postgres 直连串）。
 2. 在本目录：
 
 ```bash
