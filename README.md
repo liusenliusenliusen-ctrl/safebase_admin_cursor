@@ -5,7 +5,7 @@
 | 仓库 | 角色 |
 |------|------|
 | [safebase_front_cursor](../safebase_front_cursor) | 主站：Auth、对话、日记、迁移、Edge |
-| [safebase_backend_cursor](../safebase_backend_cursor) | 本后台依赖的 API + Celery |
+| [safebase_backend_cursor](../safebase_backend_cursor) | 本后台依赖的 API + 夜间批处理 |
 | **本仓库** | 只读展示 + Admin Key 登录 |
 
 ## 架构
@@ -56,11 +56,11 @@ cp .env.example .env
 # 填写 DATABASE_URL（指向 Supabase 本地 DB，如 127.0.0.1:54322）
 # 填写 ADMIN_SECRET=你的管理密钥
 
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
+npm install
+npm run dev            # 默认 http://0.0.0.0:8000
 ```
 
-`OPENROUTER_API_KEY` 仅 Celery 需要；**仅看管理后台可不配**。
+`OPENROUTER_API_KEY` 仅夜间批处理需要；**仅看管理后台可不配**。
 
 ### 3. 启动本前端
 
