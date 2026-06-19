@@ -1,6 +1,6 @@
 # SafeBase · 管理后台
 
-独立 React 应用，供运营/开发查看 **Supabase 注册用户** 与业务数据统计。不实现主站功能，不连接 Supabase 客户端；所有数据经 Node backend **`/api/admin/*`** 读取与主站**同一 Postgres**。
+独立 React 应用，供运营/开发查看 **Supabase 注册用户** 与业务数据统计。不实现主站功能，不连接 Supabase 客户端；所有数据经 FastAPI **`/api/admin/*`** 读取与主站**同一 Postgres**。
 
 | 仓库 | 角色 |
 |------|------|
@@ -12,8 +12,8 @@
 
 ```text
 浏览器 (localhost:5174)
-  → Vite proxy /api → Fastify :8000
-       → admin/routes.ts
+  → Vite proxy /api → FastAPI :8000
+       → routers_admin.py
             → auth.users（用户列表）
             → messages / profiles / summaries / anchors（统计与详情）
 ```
@@ -128,4 +128,4 @@ npm run build
 npm run preview
 ```
 
-生产部署见 [safebase_front_cursor/docs/DEPLOYMENT.md](../safebase_front_cursor/docs/DEPLOYMENT.md)：将 `VITE_API_BASE_URL` 指向实际后端，或由 Nginx 统一转发 `/api`。
+生产部署时需将 `VITE_API_BASE_URL` 指向实际后端地址，或由网关统一转发 `/api/admin`。
