@@ -51,3 +51,5 @@ npm install && npm run dev   # http://localhost:5174
 npm run build
 npm run preview
 ```
+
+生产部署（Nginx + PM2、从本地上传）：见主站 [docs/DEPLOYMENT.md](../safebase_front_cursor/docs/DEPLOYMENT.md)。管理后台监听 **8081**，登录密钥 = 后端 `ADMIN_SECRET`。
